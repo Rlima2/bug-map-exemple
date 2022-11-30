@@ -1,0 +1,21 @@
+
+  <div class="mapa">
+    <div class="w-100 vh-100 float-end"
+    leaflet
+    style=""
+    [leafletOptions]="options"
+    [leafletBaseLayers]="baseLayers"
+    [leafletMarkerCluster]="markerClusterData"
+    [leafletMarkerClusterOptions]="markerClusterOptions"
+    (leafletMarkerClusterReady)="markerClusterReady($event)"
+    (leafletMapReady)="onMapReady($event)"
+    ></div>
+
+
+
+    <!-- Botão para ver a tua localização -->
+    <leaflet-locate-control
+    [map]="map"
+    [options]="locateOptions"
+    ></leaflet-locate-control>
+  </div>
